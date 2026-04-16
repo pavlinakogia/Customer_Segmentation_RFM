@@ -1,0 +1,22 @@
+# --- Power BI ---
+# Προσωρινά αρχεία και backups του Power BI
+*.pbit
+*.pbix.temp
+*.pbi.bak
+
+# --- Python & IDEs ---
+# Φάκελοι του PyCharm και του VS Code
+.idea/
+.vscode/
+__pycache__/
+*.pyc
+venv/
+.env
+
+# --- Data ---
+# Παράγεται αυτόματα από τον κώδικά σου.
+rfm_segments.csv
+
+# --- System Files ---
+.DS_Store
+Thumbs.db
