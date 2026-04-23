@@ -4,7 +4,7 @@ import sqlite3
 # 1. Φόρτωση δεδομένων
 df = pd.read_csv('dataset/sales_data_sample.csv', encoding='unicode_escape')
 
-# 2. Μετατροπή της ημερομηνίας σε σωστό Date Format (Πολύ σημαντικό για την SQL!)
+# 2. Μετατροπή της ημερομηνίας σε σωστό Date Format
 df['ORDERDATE'] = pd.to_datetime(df['ORDERDATE'])
 
 # 3. Σύνδεση με την προσωρινή SQL βάση
@@ -45,8 +45,7 @@ rfm_result = run_query(rfm_query)
 print(rfm_result.head(10))
 
 rfm_result = run_query(rfm_query)
-print(rfm_result.head(10)) # Δείξε μας τους 10 πιο "πρόσφατους" πελάτες
+print(rfm_result.head(10)) # Δείξε τους 10 πιο "πρόσφατους" πελάτες
 
-# Σώζουμε το αποτέλεσμα για να το ανοίξουμε στο Power BI
 rfm_result.to_csv('rfm_segments.csv', index=False)
 print("Το αρχείο rfm_segments.csv δημιουργήθηκε!")
